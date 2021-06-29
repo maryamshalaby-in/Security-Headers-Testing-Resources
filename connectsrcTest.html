@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <script>
+        try {
+            var xhr = new XMLHttpRequest;
+            xhr.open("GET", "https://thumbs.dreamstime.com/b/sad-face-holding-isolated-white-background-36708154.jpg", true); //should fail
+            xhr.send();
+            xhr.onload = function() {
+                alert("successfull request");
+            }
+            xhr.onerror = function() {
+                alert("failed request");
+            }
+        } catch (e) {
+            alert("failed request");
+        }
+        </script>
+    </body>
+</html>
